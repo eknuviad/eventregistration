@@ -1,6 +1,9 @@
 
 {
 	"language": "java",
+	"os": [
+		"linux"
+	],
 	"script" : [
 		"gradle build"
 	]
