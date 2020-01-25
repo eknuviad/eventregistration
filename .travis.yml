@@ -1,10 +1,4 @@
 
-{
-	"language": "java",
-	"os": [
-		"linux"
-	],
-	"script" : [
-		"gradle build"
-	]
-}
+language: java
+script:
+- gradle build
