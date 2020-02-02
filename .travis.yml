@@ -1,6 +1,6 @@
-  include:
-    - language: java
-      install: true
-      script:
-        - ./gradlew build
+language: java
+before_install: 
+-chmod +x gradlew
+script:
+- gradle build
 
