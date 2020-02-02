@@ -1,7 +1,6 @@
-matrix:
   include:
     - language: java
-
+      install: true
       script:
-        - "./gradlew build"
+        - ./gradlew build
 
