@@ -1,4 +1,3 @@
 language: java
 script:
-- cd EventRegistration-Backend
-- ./gradlew build
+- gradle build
