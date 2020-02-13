@@ -10,7 +10,7 @@ import javax.persistence.Id;
 public class RegistrationManager{
    private Set<Person> person;
    
-   @OneToMany(mappedBy="registrationManager" , cascade={CascadeType.ALL})
+   @OneToMany(cascade={CascadeType.ALL})
    public Set<Person> getPerson() {
       return this.person;
    }
@@ -21,7 +21,7 @@ public class RegistrationManager{
    
    private Set<Registration> registration;
    
-   @OneToMany(mappedBy="registrationManager" , cascade={CascadeType.ALL})
+   @OneToMany(cascade={CascadeType.ALL})
    public Set<Registration> getRegistration() {
       return this.registration;
    }
@@ -32,7 +32,7 @@ public class RegistrationManager{
    
    private Set<Event> event;
    
-   @OneToMany(mappedBy="registrationManager" , cascade={CascadeType.ALL})
+   @OneToMany(cascade={CascadeType.ALL})
    public Set<Event> getEvent() {
       return this.event;
    }

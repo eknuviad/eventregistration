@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Registration{
-   private RegistrationManager registrationManager;
+   private Event event;
    
    @ManyToOne(optional=false)
    public RegistrationManager getRegistrationManager() {
