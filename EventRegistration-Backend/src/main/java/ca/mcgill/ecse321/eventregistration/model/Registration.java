@@ -2,32 +2,19 @@ package ca.mcgill.ecse321.eventregistration.model;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import java.util.Set;
-import javax.persistence.ManyToMany;
 import javax.persistence.Id;
 
 @Entity
 public class Registration{
-   private RegistrationManager registrationManager;
+   private Event event;
    
    @ManyToOne(optional=false)
-   public RegistrationManager getRegistrationManager() {
-      return this.registrationManager;
-   }
-   
-   public void setRegistrationManager(RegistrationManager registrationManager) {
-      this.registrationManager = registrationManager;
-   }
-   
-   private Set<Event> event;
-   
-   @ManyToMany(mappedBy="registration" )
-   public Set<Event> getEvent() {
+   public Event getEvent() {
       return this.event;
    }
    
-   public void setEvent(Set<Event> events) {
-      this.event = events;
+   public void setEvent(Event event) {
+      this.event = event;
    }
    
    private Person person;
