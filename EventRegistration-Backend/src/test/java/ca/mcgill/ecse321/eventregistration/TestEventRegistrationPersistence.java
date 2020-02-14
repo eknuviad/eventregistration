@@ -37,10 +37,10 @@ public class TestEventRegistrationPersistence {
 	@AfterEach
 	public void clearDatabase() {
 		// Fisrt, we clear registrations to avoid exceptions due to inconsistencies
-		// registrationRepository.deleteAll();
-		// // Then we can clear the other tables
-		// personRepository.deleteAll();
-		// eventRepository.deleteAll();
+		registrationRepository.deleteAll();
+		// Then we can clear the other tables
+		personRepository.deleteAll();
+		eventRepository.deleteAll();
 	}
 
 	@Test

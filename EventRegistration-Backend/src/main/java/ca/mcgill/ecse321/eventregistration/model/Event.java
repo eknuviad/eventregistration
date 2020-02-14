@@ -1,5 +1,6 @@
 package ca.mcgill.ecse321.eventregistration.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.sql.Date;
@@ -55,7 +56,7 @@ public Time getEndTime() {
    
    private Set<Event> event1;
    
-   @ManyToMany(mappedBy="event" )
+   @ManyToMany(mappedBy="event", cascade = { CascadeType.ALL } )
    public Set<Event> getEvent1() {
       return this.event1;
    }

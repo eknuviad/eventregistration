@@ -1,5 +1,6 @@
 package ca.mcgill.ecse321.eventregistration.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.ManyToMany;
@@ -7,7 +8,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Registration{
-   private Event event;
+   private RegistrationManager registrationManager;
    
    @ManyToOne(optional=false)
    public RegistrationManager getRegistrationManager() {
@@ -20,7 +21,7 @@ public class Registration{
    
    private Event event;
    
-   @ManyToMany(mappedBy="registration" )
+   @ManyToMany(mappedBy="registration", cascade = { CascadeType.ALL } )
    public Event getEvent() {
       return this.event;
    }
@@ -31,7 +32,7 @@ public class Registration{
    
    private Person person;
    
-   @ManyToOne(optional=false)
+   @ManyToOne(optional=false,  cascade = { CascadeType.ALL })
    public Person getPerson() {
       return this.person;
    }
