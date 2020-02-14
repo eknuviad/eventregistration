@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Registration{
-   private RegistrationManager registrationManager;
+   private RegistrationManager registrationManager = null;
    
    @ManyToOne(optional=false)
    public RegistrationManager getRegistrationManager() {
